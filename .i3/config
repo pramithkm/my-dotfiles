@@ -146,36 +146,14 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#        status_command i3status
-#}
-
-
-#menu
-#bindsym $mod+F1 exec dmenu_run -i -p "Run: " -fn "Fira Mono-10:bold" -nb "#282828" -nf "#d8d8d8" -sb "#d8d8d8" -sf "#282828"
-
-
-###################################
-
-# lock session
-bindsym $mod+Escape exec light-locker-command --lock
-#bindsym Ctrl+$mod+l exec xautolock -locknow
-bindsym $mod+x exec i3lock -t -i /home/pramithd/xlinux/wallpapers/beach.png
-
-exec --no-startup-id light-locker
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available
 bar {
     status_command i3status -c /home/pramithd/.i3/i3status.conf
     workspace_buttons yes
-    tray_output primary
+    #tray_output primary
     #output_format = i3bar
 
     font xft:Fira Mono Bold 8
     colors {
-        #background #282828
         background #382732
         statusline #d8d8d8
 
@@ -194,23 +172,27 @@ for_window [class="mplayer"] floating enable
 for_window [class="MPlayer"] floating enable
 for_window [title="Hangouts"] floating enable
 for_window [class="^Spotify"] floating enable
+for_window [window_role="pop-up"] floating enable
 #for_window [class="chrome"] floating enable
 
-# hangout conversations
-for_window [window_role="pop-up"] floating enable
+############ lock session #################
+bindsym $mod+x exec "/home/pramithd/.i3/locker.sh"
+exec xautolock -time 15 -locker 'i3lock /home/pramithd/.i3/locker.sh' &
+bindsym $mod+p exec i3lock -t -u -i /home/pramithd/xlinux/wallpapers/liya.png
+#exec 'xautolock -time 3 -locker i3lock /home/pramithd/.i3/locker.sh' &
+#xautolock -time 5 -notify 10 -notifier "notify-send -u normal -t 10000 -a xautolock 'Autolocking session in 10 seconds...'" -locker ~/.i3/locker.sh
 
-exec --no-startup-id ~/.i3/set-wallpaper
-exec --no-startup-id i3lock  -t -i /home/pramithd/xlinux/wallpapers/beach.png
-# Scratchpad
+############### Scratchpad ###############
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
-
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
-
 # Show the sup-mail scratchpad window, if any.
 # bindsym mod4+s [title="^Sup ::"] scratchpad show
 
+# Volume
+bindcode $mod+F5 exec amixer set Master 5%-
+bindcode $mod+F6 exec amixer set Master 5%+
 
 bindcode 92                  exec ~/.i3/audio-volume down
 bindcode 184                 exec ~/.i3/audio-volume up
@@ -220,6 +202,8 @@ bindsym XF86AudioRaiseVolume exec ~/.i3/audio-volume up
 bindsym $mod+F7              exec ~/.i3/audio-volume down
 bindsym $mod+F8              exec ~/.i3/audio-volume up
 
+#Taskbar Apps
 exec --no-startup-id nm-applet
+exec --no-startup-id variety
 exec --no-startup-id volumeicon
-exec --no-startup-id gnome-sound-applet
+#exec --no-startup-id gnome-sound-applet

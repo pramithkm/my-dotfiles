@@ -1,0 +1,18 @@
+21/03/17 10:08:25 - ERROR: Using Xinerama instead of RandR. This option should be avoided at all cost because it does not refresh the list of screens, so you cannot configure displays at runtime. Please check if your driver really does not support RandR and disable this option as soon as you can.
+21/03/17 10:08:25 - i3 4.11 (2015-09-30, branch "4.11") starting
+21/03/17 10:08:25 - Parsing configfile /home/pramithd/.i3/config
+21/03/17 10:08:25 - deciding for version 4 due to this line: # i3 config file (v4)
+21/03/17 10:08:25 - [libi3] libi3/font.c Using X font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+ERROR: Another window manager seems to be running (X error 10)
+21/03/17 10:09:00 - ERROR: Using Xinerama instead of RandR. This option should be avoided at all cost because it does not refresh the list of screens, so you cannot configure displays at runtime. Please check if your driver really does not support RandR and disable this option as soon as you can.
+21/03/17 10:09:00 - i3 4.11 (2015-09-30, branch "4.11") starting
+21/03/17 10:09:00 - Parsing configfile /home/pramithd/.i3/config
+21/03/17 10:09:00 - deciding for version 4 due to this line: # i3 config file (v4)
+21/03/17 10:09:00 - [libi3] libi3/font.c Using X font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+ERROR: Another window manager seems to be running (X error 10)
+21/03/17 10:09:11 - ERROR: Using Xinerama instead of RandR. This option should be avoided at all cost because it does not refresh the list of screens, so you cannot configure displays at runtime. Please check if your driver really does not support RandR and disable this option as soon as you can.
+21/03/17 10:09:11 - i3 4.11 (2015-09-30, branch "4.11") starting
+21/03/17 10:09:11 - Parsing configfile /home/pramithd/.i3/config
+21/03/17 10:09:11 - deciding for version 4 due to this line: # i3 config file (v4)
+21/03/17 10:09:11 - [libi3] libi3/font.c Using X font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+ERROR: Another window manager seems to be running (X error 10)
